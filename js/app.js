@@ -44,4 +44,7 @@ function addVehicle () {
 
     // add the new row to the table
     $("#vehicles-table tbody").append(newRow);
+
+    // clear the form
+    $("#new-vehicle-form input").val("");
 }
