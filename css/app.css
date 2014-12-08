@@ -1,5 +1,6 @@
 
-#vehicles-table-container {
+#vehicles-table-container,
+#vehicle-rules-table-container {
     text-align: left;
 }
 

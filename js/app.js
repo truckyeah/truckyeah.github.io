@@ -11,6 +11,7 @@ $(function start () {
 
     // add button action
     $("#new-vehicle-add").click(addVehicle);
+    $("#process-vehicle-list").click(doMagic);
 
 });
 
@@ -45,4 +46,37 @@ function addVehicle () {
 
     // clear the form
     $("#new-vehicle-form input").val("");
+}
+
+
+function doMagic () {
+    // show the table of modifications
+    $("#vehicle-rules-table-container").removeClass("hidden");
+
+    $.each(vehicles, function (index, vehicle) {
+        vehicle.rules = findTheRules(vehicle);
+
+        var newRow = $("<tr></tr>");
+        var makeCell = $("<td></td>");
+        var yearCell = $("<td></td>");
+        var gvwrCell = $("<td></td>");
+        var rulesCell = $("<td></td>");
+
+        makeCell.text(vehicle.make);
+        yearCell.text(vehicle.year);
+        gvwrCell.text(vehicle.gvwr);
+        rulesCell.text(vehicle.rules);
+
+        newRow.append(makeCell);
+        newRow.append(yearCell);
+        newRow.append(gvwrCell);
+        newRow.append(rulesCell);
+
+        $("#vehicle-rules-table tbody").append(newRow);
+    });
+}
+
+
+function findTheRules (vehicle) {
+    return "scrap it and buy another one";
 }
