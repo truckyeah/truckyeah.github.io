@@ -41,9 +41,50 @@
     <div class="container">
 
       <div class="app-box">
-        <h1>Let's do the magic here....</h1>
-        <p class="lead">(do some shit)</p>
+        <h1>Add your trucks below...</h1>
         <br>
+
+        <div id="vehicles-table-container">
+          <table id="vehicles-table" class="table">
+            <thead>
+              <tr>
+                <th>_</th>
+                <th>Model</th>
+                <th>Engine Year</th>
+                <th>GVWR (lbs)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="vehicle-row">
+                <td>1</td>
+                <td>Volvo</td>
+                <td>1998</td>
+                <td>42000</td>
+              </tr>
+
+              <tr class="vehicle-row">
+                <td>2</td>
+                <td>Volvo</td>
+                <td>2001</td>
+                <td>23000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Vehicle Make">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Vehicle Engine Year">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Vehicle GVWR">
+          </div>
+          <button type="button" class="btn btn-primary">+ Add Vehicle</button>
+        </form>
+
       </div>
 
     </div><!-- /.container -->
