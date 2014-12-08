@@ -3,8 +3,8 @@
  */
 
 // GLOBALS
-var vehicleTableIndex = 1;
-
+var vehicleCount = 0;
+var vehicles = [];
 
 $(function start () {
     // ready set go
@@ -16,34 +16,32 @@ $(function start () {
 
 
 function addVehicle () {
-    var make = $("#new-vehicle-make").val();
-    var year = $("#new-vehicle-year").val();
-    var gvwr = $("#new-vehicle-gvwr").val();
+    var vehicle = {};
 
-    console.log("make:", make);
-    console.log("year:", year);
-    console.log("gvwr:", gvwr);
-    console.log("");
+    vehicle.make = $("#new-vehicle-make").val();
+    vehicle.year = $("#new-vehicle-year").val();
+    vehicle.gvwr = $("#new-vehicle-gvwr").val();
 
     // create the table row
     var newRow = $("<tr></tr>");
-    var indexCell = $("<td></td>");
     var makeCell = $("<td></td>");
     var yearCell = $("<td></td>");
     var gvwrCell = $("<td></td>");
 
-    indexCell.text(vehicleTableIndex++);
-    makeCell.text(make);
-    yearCell.text(year);
-    gvwrCell.text(gvwr);
+    makeCell.text(vehicle.make);
+    yearCell.text(vehicle.year);
+    gvwrCell.text(vehicle.gvwr);
 
-    newRow.append(indexCell);
     newRow.append(makeCell);
     newRow.append(yearCell);
     newRow.append(gvwrCell);
 
     // add the new row to the table
     $("#vehicles-table tbody").append(newRow);
+
+    // store the new vehicle in the list of vehicles
+    vehicles.push(vehicle);
+    vehicleCount++;
 
     // clear the form
     $("#new-vehicle-form input").val("");
