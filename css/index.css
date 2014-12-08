@@ -1,3 +1,6 @@
+.body {
+    background: url('background.png');
+}
 
 .starter-template {
     padding: 40px 15px;
