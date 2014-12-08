@@ -1,5 +1,6 @@
-.body {
-    background: url('background.png');
+body {
+    background: url('../img/truck.png');
+    background-repeat: no-repeat;
 }
 
 .starter-template {
