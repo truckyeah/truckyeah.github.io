@@ -1,6 +1,18 @@
 body {
+    padding-top: 50px;
+}
+
+#background {
     background: url('../img/truck.png');
+    background-size: 120% 120%;
     background-repeat: no-repeat;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
 }
 
 .starter-template {
