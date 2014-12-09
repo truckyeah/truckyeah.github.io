@@ -17,11 +17,31 @@ $(function start () {
 
 
 function addVehicle () {
+
     var vehicle = {};
 
     vehicle.make = $("#new-vehicle-make").val();
     vehicle.year = $("#new-vehicle-year").val();
     vehicle.gvwr = $("#new-vehicle-gvwr").val();
+
+    // validate the input - no blank fields allowed
+    if (vehicle.make == "") {
+        console.log("make can't be empty")
+        return;
+    }
+
+    if (vehicle.year == "") {
+        console.log("year can't be empty")
+        return;
+    }
+
+    if (vehicle.gvwr == "") {
+        console.log("gvwr can't be empty")
+        return;
+    }
+
+    // enable the "add vehicle" button
+    $("#process-vehicle-list").prop('disabled', false);
 
     // create the table row
     var newRow = $("<tr></tr>");
@@ -53,6 +73,8 @@ function doMagic () {
     // show the table of modifications
     $("#vehicle-rules-table-container").removeClass("hidden");
 
+    $("#process-vehicle-list").prop('disabled', true);
+
     $.each(vehicles, function (index, vehicle) {
         vehicle.rules = findTheRules(vehicle);
 
@@ -78,5 +100,9 @@ function doMagic () {
 
 
 function findTheRules (vehicle) {
+    var today = moment();
+
+
     return "scrap it and buy another one";
+
 }
