@@ -1,0 +1,10 @@
+.app-box {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+#info-links-container,
+#info-container {
+    text-align: left;
+}
+
