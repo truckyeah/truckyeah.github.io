@@ -3,3 +3,8 @@
     text-align: center;
 }
 
+#info-links-container,
+#info-container {
+    text-align: left;
+}
+
