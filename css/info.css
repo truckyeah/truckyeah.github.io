@@ -1,0 +1,11 @@
+
+#vehicles-table-container,
+#vehicle-rules-table-container {
+    text-align: left;
+}
+
+.app-box {
+    padding: 40px 15px;
+    text-align: center;
+}
+
