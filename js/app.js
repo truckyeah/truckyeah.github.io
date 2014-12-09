@@ -17,26 +17,28 @@ $(function start () {
 
 
 function addVehicle () {
+    // remove any previous errors on the inputs
+    $("#new-vehicle-form").find(".form-group").removeClass("has-error");
 
     var vehicle = {};
 
-    vehicle.make = $("#new-vehicle-make").val();
-    vehicle.year = $("#new-vehicle-year").val();
-    vehicle.gvwr = $("#new-vehicle-gvwr").val();
+    vehicle.make = $("#new-vehicle-make input").val();
+    vehicle.year = $("#new-vehicle-year input").val();
+    vehicle.gvwr = $("#new-vehicle-gvwr input").val();
 
     // validate the input - no blank fields allowed
     if (vehicle.make == "") {
-        console.log("make can't be empty")
+        $("#new-vehicle-make").addClass("has-error");
         return;
     }
 
     if (vehicle.year == "") {
-        console.log("year can't be empty")
+        $("#new-vehicle-year").addClass("has-error");
         return;
     }
 
     if (vehicle.gvwr == "") {
-        console.log("gvwr can't be empty")
+        $("#new-vehicle-gvwr").addClass("has-error");
         return;
     }
 
