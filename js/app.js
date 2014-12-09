@@ -112,60 +112,60 @@ function findTheRules (vehicle) {
     if (gvwr <= 26000 ) {
         if (year <= 1995) {
             // 2015 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2015';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2015';
         }
         if (year == 1996) {
             // 2016 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2016';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2016';
         }
         if (year == 1997) {
             // 2017 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2017';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2017';
         }
         if (year == 1998) {
             // 2018 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2018';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2018';
         }
         if (year == 1999) {
             // 2019 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2019';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2019';
         }
         if (year > 1999 && year <= 2003) {
             // 2020 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2020';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2020';
         }
         if (year >= 2004 && year <= 2006) {
             // 2021 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2020';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2020';
         }
         else {
             // 2023 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2023';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2023';
         }
     }
     else { // if vehicle.gvwr > 26000
         if (year <= 1993) {
             // 2015 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2015';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2015';
         }
         if (year == 1994 || year == 1995) {
             // 2016 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2016';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2016';
         }
         if (year >= 1996 && year <= 1999) {
             // 2020 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2020';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2020';
         }
         if (year >= 2000 && year <= 2004) {
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2021';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2021';
         }
         if (year >= 2005 && year <= 2006) {
             // 2022 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2022';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2022';
         }
         else { // if year >= 2007
             // 2023 compliance
-            return 'must meet <a href="info.html">2010 engine-equivalent standards</a> by Jan 1, 2023';
+            return 'must meet <a href="info.html#engine-equivalent-standards-2010">2010 engine-equivalent standards</a> by Jan 1, 2023';
         }
     }
 
