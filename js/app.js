@@ -42,7 +42,7 @@ function addVehicle () {
         return;
     }
 
-    // enable the "add vehicle" button
+    // enable the "do magic" button
     $("#process-vehicle-list").prop('disabled', false);
 
     // create the table row
@@ -72,10 +72,13 @@ function addVehicle () {
 
 
 function doMagic () {
+    // empty the container - we're gonna repopulate it
+    $("#vehicle-rules-table tbody").empty();
+
     // show the table of modifications
     $("#vehicle-rules-table-container").removeClass("hidden");
 
-    $("#process-vehicle-list").prop('disabled', true);
+    //$("#process-vehicle-list").prop('disabled', true);
 
     $.each(vehicles, function (index, vehicle) {
         vehicle.rules = findTheRules(vehicle);
